@@ -739,12 +739,13 @@
                             </ul>
                         </div>
                         <div class="pt-6 border-t border-stone-100 mt-auto">
-                            <h3 class="font-mono font-bold text-teal-700 text-xl border-b-2 border-teal-100 pb-2 mb-3">plong <span class="text-[10px] sm:text-xs border border-teal-200 bg-teal-50 px-2 py-0.5 rounded ml-1 sm:ml-2 font-sans align-middle uppercase tracking-widest text-teal-800 font-bold whitespace-nowrap">Partitive</span></h3>
-                            <p class="text-sm text-stone-600 mb-2"><strong class="text-stone-800">Function:</strong> Categorization, subset membership (A &isin; B), and property subordination.</p>
-                            <p class="text-sm text-stone-600 mb-3"><strong class="text-stone-800">Usage:</strong> <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-900 font-bold">plong</code> defines the subject as a component part, property, or subordinate member of a larger class or entity. It functions as the logical inverse of possession.</p>
+                            <h3 class="font-mono font-bold text-teal-700 text-xl border-b-2 border-teal-100 pb-2 mb-3">plong <span class="text-[10px] sm:text-xs border border-teal-200 bg-teal-50 px-2 py-0.5 rounded ml-1 sm:ml-2 font-sans align-middle uppercase tracking-widest text-teal-800 font-bold whitespace-nowrap">Categorical</span></h3>
+                            <p class="text-sm text-stone-600 mb-2"><strong class="text-stone-800">Function:</strong> Categorization, set membership (A &isin; B or A &sub; B), and systemic subordination.</p>
+                            <p class="text-sm text-stone-600 mb-3"><strong class="text-stone-800">Usage:</strong> <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-900 font-bold">plong</code> defines the subject as a member, subset, or intrinsic component of a larger class, system, or collective. It prevents speakers from confusing <strong>Identity (<code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-800">sen</code>, A = B)</strong> with <strong>Class Inclusion</strong> when translating the English <em>"is a..."</em> (<strong>Note:</strong> alienable ownership is expressed via the passive of <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-800">khabh</code> &rarr; <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-800">khabhuo</code>, "is owned by," whereas <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-800">plong</code> denotes structural or categorical belonging.)</p>
                             <ul class="text-sm text-stone-700 space-y-1.5 bg-stone-50 p-3 rounded border border-stone-100">
-                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Syntax:</strong> <span class="font-mono font-bold text-stone-900 bg-white border border-stone-200 px-1 rounded">[Subject] plongo [Category]</span></li>
-                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Example:</strong><br> <span class="font-mono text-stone-800 bg-white border border-stone-200 px-1 rounded">klodhu plongo merjherd.</span> <em class="text-stone-500 text-xs leading-tight">(The clothes belongs to / is the property of the traveler.)</em></li>
+                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Syntax:</strong> <span class="font-mono font-bold text-stone-900 bg-white border border-stone-200 px-1 rounded">[Subject] plongo [Category / System]</span></li>
+                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Categorization:</strong><br> <span class="font-mono text-stone-800 bg-white border border-stone-200 px-1 rounded">tog plongo nim.</span> <em class="text-stone-500 text-xs leading-tight">(A dog is an animal / belongs to the animal class.)</em></li>
+                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Component:</strong><br> <span class="font-mono text-stone-800 bg-white border border-stone-200 px-1 rounded">rodh plongo yarm.</span> <em class="text-stone-500 text-xs leading-tight">(The wheel is part of the vehicle.)</em></li>
                             </ul>
                         </div>
                     </div>
@@ -783,9 +784,9 @@
                             </tr>
                             <tr class="hover:bg-stone-50 border-stone-200">
                                 <td class="p-3"><code class="font-mono font-bold text-teal-800 bg-teal-50 border border-teal-100 px-2 py-1 rounded">plong</code></td>
-                                <td class="p-3 font-semibold text-stone-800">Subset / Property</td>
-                                <td class="p-3 text-center"><span class="bg-stone-100 border border-stone-200 px-2 py-0.5 rounded font-mono text-stone-500">A &isin; B</span></td>
-                                <td class="p-3 italic">"Belongs to", "Is a type of"</td>
+                                <td class="p-3 font-semibold text-stone-800">Class Inclusion / Subset</td>
+                                <td class="p-3 text-center"><span class="bg-stone-100 border border-stone-200 px-2 py-0.5 rounded font-mono text-stone-500">A &isin; B / A &sub; B</span></td>
+                                <td class="p-3 italic">"Is a [type of]", "Is part of", "Belongs to [class/system]"</td>
                             </tr>
                             <tr class="hover:bg-stone-50 border-stone-200">
                                 <td class="p-3">
@@ -3163,7 +3164,7 @@
                 { word: 'sen', cat: 'Noun/Number', pos: 'Noun', eng: 'To be (identity) / is / was' },
                 { word: 'svbh', cat: 'Noun/Number', pos: 'Noun', eng: 'To exist / to survive / to store (save) / systemic persistence' },
                 { word: 'stvz', cat: 'Noun/Number', pos: 'Noun', eng: 'To be at / to be present / located at' },
-                { word: 'plong', cat: 'Noun/Number', pos: 'Noun', eng: 'To belong to / category / property / subordinate' },
+                { word: 'plong', cat: 'Noun/Number', pos: 'Noun', eng: 'To be a type of / to belong to (a class or system) / set membership / component of' },
                 { word: 'log', cat: 'Noun/Number', pos: 'Noun', eng: 'Position / coordinate / seat / status / slot' },
                 { word: 'son', cat: 'Noun/Number', pos: 'Noun', eng: 'Zone / region / district / area' },
                 { word: 'krenz', cat: 'Noun/Number', pos: 'Noun', eng: 'Situation / affair / occurrence' },

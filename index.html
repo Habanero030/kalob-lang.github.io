@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- Chosen Palette: Warm Neutrals & Deep Blue (Heritage Bolak) -->
-    <!-- Application Structure Plan: The SPA is structured as a tabbed interactive dashboard consisting of four main sections: Phonology (visualizing sounds), Grammar (explaining word categories, shortword details, longword details, the complex 'u' tool, and Margretation), Lexicon (an interactive dictionary incorporating all new pronouns, connectives, and adverbs), and Syntax & Tools (featuring expanded verb conjugators, Suffix Applier, a new A/M Conjugator, and a Number Derivator). This structure supports non-linear learning, allowing users to cross-reference grammar rules with active tools. The Lexicon is interlinked with the Tools tab via conditionally rendered shortcut buttons for Nouns. -->
+    <!-- Application Structure Plan: The SPA is structured as a tabbed interactive dashboard consisting of four main sections: Phonology (visualizing sounds), Grammar (explaining word categories, shortword details, longword details, the complex 'u' tool, and Margaretation), Lexicon (an interactive dictionary incorporating all new pronouns, connectives, and adverbs), and Syntax & Tools (featuring expanded verb conjugators, Suffix Applier, a new A/M Conjugator, and a Number Derivator). This structure supports non-linear learning, allowing users to cross-reference grammar rules with active tools. The Lexicon is interlinked with the Tools tab via conditionally rendered shortcut buttons for Nouns. -->
     <!-- Visualization & Content Choices: 1. Vowel System -> Goal: Inform/Organize -> Viz: Chart.js Scatter Plot + HTML Grid -> Justification: Plots 7-vowel spatial structure and maps their grammatical roles. 2. Word Categories -> Goal: Inform/Organize -> Viz: Chart.js Doughnut Chart -> Justification: Shows absolute division of the language. 3. Shortword & Longword Grids -> Goal: Inform -> Viz: Tailwind CSS Grid Cards -> Justification: Breaks down grammar rules logically. 4. Lexicon -> Goal: Search/Filter/Action -> Viz: Interactive HTML Table with Action Buttons -> Justification: Efficient parsing of CSV entries with immediate links to derivation tools. 5. Conjugator/Applier/Derivator -> Goal: Apply/Change -> Viz: Dynamic HTML Output -> Justification: Interactively teaches the 'u' tool placement, prefixes, and suffix rules for nouns, verbs, attributives, and numbers. Method: Vanilla JS, Tailwind, Chart.js. -->
     <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
 
@@ -136,7 +136,6 @@
                     <button onclick="window.print()" class="px-3 pb-3 text-stone-500 hover:text-stone-800 transition-colors whitespace-nowrap border-l border-stone-200 ml-2 pl-4" title="Print to PDF">
                         <svg class="w-5 h-5 inline-block -mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg>
                     </button>
-                </div>
                 </div>
             </div>
         </div>
@@ -546,7 +545,7 @@
                     completely different mechanical system. The grammatical concepts of person, gender, and number
                     are encoded entirely within a <strong>single characteristic consonant</strong>: <strong>m</strong> (1
                     Sg.), <strong>d</strong> (2 Fam. Sg.), <strong>bh</strong> (2 Res. Sg.), <strong>l</strong> (3 Anim. Sg.),
-                    <strong>z</strong> (3 Inan. Sg,), <strong>zh</strong> (3 Abs. Sg.)<button onclick="document.getElementById('abstract-pronoun-tooltip').classList.toggle('hidden')" class="inline-block text-stone-400 hover:text-rose-600 focus:outline-none align-text-bottom ml-1">
+                    <strong>z</strong> (3 Inan. Sg.), <strong>zh</strong> (3 Abs. Sg.)<button onclick="document.getElementById('abstract-pronoun-tooltip').classList.toggle('hidden')" class="inline-block text-stone-400 hover:text-rose-600 focus:outline-none align-text-bottom ml-1">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                     </button>, <strong>n</strong> (1 Pl.), <strong>b</strong> (2
                     Fam. Pl.), <strong>g</strong> (2 Res. Pl.), <strong>dh</strong> (3 Anim. Pl.), <strong>j</strong> (3 Inan. Pl.),
@@ -617,7 +616,7 @@
             <!-- Modal Compression and Stative Equivalency -->
             <div class="mb-8">
                 <h2 class="text-2xl font-bold mb-4 text-stone-800">Modal Compression & Stative Equivalency</h2>
-                <p class="text-lg text-stone-600 mb-6">Kalob utilizes a highly efficient mechanic called <strong>Modal Compression</strong>, where two auxiliary concepts are encoded directly into the vowel matrix of attributive and modificative suffixes. This creates a direct, mathematically equivalent relationship between a Passive Modal State (using a derived attributive) and an Active Serial Verb Construction (SVC).</p>
+                <p class="text-lg text-stone-600 mb-6">Kalob utilizes a highly efficient mechanic called <strong>Modal Compression</strong>, where two auxiliary concepts are encoded directly into the vowel matrix of attributive and modificative suffixes. This creates a direct, mathematically equivalent relationship between a Passive Modal State (using a derived attributive) and a Passive Serial Verb Construction (SVC).</p>
 
                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     <!-- Card 1 -->
@@ -715,7 +714,7 @@
                             <p class="text-sm text-stone-600 mb-3"><strong class="text-stone-800">Usage:</strong> <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-900 font-bold">sen</code> is utilized exclusively when equating a subject to another noun (identity), or when structurally anchoring a derived <strong>Modal Compression</strong> attributive.</p>
                             <ul class="text-sm text-stone-700 space-y-1.5 bg-stone-50 p-3 rounded border border-stone-100">
                                 <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Identity:</strong><br> <span class="font-mono bg-white px-1 border border-stone-200 rounded text-stone-800">zhe seno kw...</span> <em class="text-stone-500 text-xs">(It is true/correct that...)</em></li>
-                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Equivalence:</strong><br> <span class="font-mono bg-white px-1 border border-stone-200 rounded text-stone-800">Taguphyezd seno qangusorz estergij.</span> <em class="text-stone-500 text-xs">(The Sun is the strongest light source.)</em></li>
+                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Equivalence:</strong><br> <span class="font-mono bg-white px-1 border border-stone-200 rounded text-stone-800">Taguphyezd seno qangusorz istergij.</span> <em class="text-stone-500 text-xs">(The Sun is the strongest light source.)</em></li>
                                 <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Modal Anchor:</strong><br> <span class="font-mono bg-white px-1 border border-stone-200 rounded text-stone-800">le seno lwbhwj.</span> <em class="text-stone-500 text-xs">(He is lovable / able to be loved.)</em></li>
                             </ul>
                         </div>
@@ -980,11 +979,11 @@
                 </div>
             </div>
 
-            <!-- Margretation Deep Dive -->
+            <!-- Margaretation Deep Dive -->
             <div class="bg-blue-900 text-white p-6 rounded-xl shadow-md border border-blue-800 mt-8">
-                <h2 class="text-2xl font-bold mb-4 text-blue-300">Margretation: Degrees of Intensity</h2>
+                <h2 class="text-2xl font-bold mb-4 text-blue-300">Margaretation: Degrees of Intensity</h2>
                 <p class="text-blue-100 mb-6 text-sm">
-                    Margretation is a rule used to express different quantitative shades, degrees of intensity, or degrees of comparison for abstract thoughts.
+                    Margaretation is a rule used to express different quantitative shades, degrees of intensity, or degrees of comparison for abstract thoughts.
                 </p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
                     <!-- The Process -->
@@ -2649,7 +2648,7 @@
                         </div>
                         <div class="border border-stone-300 p-2 rounded-lg">
                             <div class="flex items-center gap-2">
-                            <label class="text-stone-600 text-xs font-bold uppercase tracking-wide">MARGRETATION PREFIX:</label>
+                            <label class="text-stone-600 text-xs font-bold uppercase tracking-wide">MARGARETATION PREFIX:</label>
                             </div>
                             <div class="flex items-center gap-2 min-w-0 w-full sm:w-auto">
                             <select id="am-prefix" class="px-2 py-1 border border-stone-300 rounded text-stone-700 focus:ring-purple-500 focus:border-purple-500 bg-white text-xs outline-none w-full max-w-[200px] sm:max-w-none">
@@ -3498,24 +3497,24 @@
                 { word: 'sand', cat: 'Noun/Number', pos: 'Noun', eng: 'Sand / grit / granule' },
                 { word: 'shvbh', cat: 'Noun/Number', pos: 'Noun', eng: 'Rain' },
                 { word: 'skwd', cat: 'Noun/Number', pos: 'Noun', eng: 'Cloud' },
-                { word: 'phriz', cat: 'Noun/Number', pos: 'Noun', eng: 'Ice / freezing	' },
-                { word: 'spez', cat: 'Noun/Number', pos: 'Noun', eng: 'Empty / void / space / air	' },
-                { word: 'terdh', cat: 'Noun/Number', pos: 'Noun', eng: 'Soil / dirt / dry earth / particulate matter	' },
-                { word: 'thwnd', cat: 'Noun/Number', pos: 'Noun', eng: 'Thunder / electric storm	' },
-                { word: 'nejh', cat: 'Noun/Number', pos: 'Noun', eng: 'Snow	' },
-                { word: 'shad', cat: 'Noun/Number', pos: 'Noun', eng: 'Shadow / reflection / image	' },
-                { word: 'cib', cat: 'Noun/Number', pos: 'Noun', eng: 'Island	' },
-                { word: 'smog', cat: 'Noun/Number', pos: 'Noun', eng: 'Smoke	' },
-                { word: 'polz', cat: 'Noun/Number', pos: 'Noun', eng: 'Ash / dust / dirt particles	' },
-                { word: 'kozd', cat: 'Noun/Number', pos: 'Noun', eng: 'Coast / shore / bank	' },
-                { word: 'korjh', cat: 'Noun/Number', pos: 'Noun', eng: 'Valley / gorge / ravine	' },
-                { word: 'malm', cat: 'Noun/Number', pos: 'Noun', eng: 'Mineral / ore / mine	' },
-                { word: 'sorz', cat: 'Noun/Number', pos: 'Noun', eng: 'Spring / source / fountain	' },
-                { word: 'strim', cat: 'Noun/Number', pos: 'Noun', eng: 'River / stream	' },
-                { word: 'pand', cat: 'Noun/Number', pos: 'Noun', eng: 'Lake / pool / pond	' },
-                { word: 'krwzd', cat: 'Noun/Number', pos: 'Noun', eng: 'Shell / crust	' },
-                { word: 'mizd', cat: 'Noun/Number', pos: 'Noun', eng: 'Fog / mist	' },
-                { word: 'trong', cat: 'Noun/Number', pos: 'Noun', eng: 'Wave (propagation) / ripple / kinetic energy moving through a medium	' },
+                { word: 'phriz', cat: 'Noun/Number', pos: 'Noun', eng: 'Ice / freezing' },
+                { word: 'spez', cat: 'Noun/Number', pos: 'Noun', eng: 'Empty / void / space / air' },
+                { word: 'terdh', cat: 'Noun/Number', pos: 'Noun', eng: 'Soil / dirt / dry earth / particulate matter' },
+                { word: 'thwnd', cat: 'Noun/Number', pos: 'Noun', eng: 'Thunder / electric storm' },
+                { word: 'nejh', cat: 'Noun/Number', pos: 'Noun', eng: 'Snow' },
+                { word: 'shad', cat: 'Noun/Number', pos: 'Noun', eng: 'Shadow / reflection / image' },
+                { word: 'cib', cat: 'Noun/Number', pos: 'Noun', eng: 'Island' },
+                { word: 'smog', cat: 'Noun/Number', pos: 'Noun', eng: 'Smoke' },
+                { word: 'polz', cat: 'Noun/Number', pos: 'Noun', eng: 'Ash / dust / dirt particles' },
+                { word: 'kozd', cat: 'Noun/Number', pos: 'Noun', eng: 'Coast / shore / bank' },
+                { word: 'korjh', cat: 'Noun/Number', pos: 'Noun', eng: 'Valley / gorge / ravine' },
+                { word: 'malm', cat: 'Noun/Number', pos: 'Noun', eng: 'Mineral / ore / mine' },
+                { word: 'sorz', cat: 'Noun/Number', pos: 'Noun', eng: 'Spring / source / fountain' },
+                { word: 'strim', cat: 'Noun/Number', pos: 'Noun', eng: 'River / stream' },
+                { word: 'pand', cat: 'Noun/Number', pos: 'Noun', eng: 'Lake / pool / pond' },
+                { word: 'krwzd', cat: 'Noun/Number', pos: 'Noun', eng: 'Shell / crust' },
+                { word: 'mizd', cat: 'Noun/Number', pos: 'Noun', eng: 'Fog / mist' },
+                { word: 'trong', cat: 'Noun/Number', pos: 'Noun', eng: 'Wave (propagation) / ripple / kinetic energy moving through a medium' },
                 { word: 'phlwgz', cat: 'Noun/Number', pos: 'Noun', eng: 'To flow / stream / current' },
                 { word: 'splod', cat: 'Noun/Number', pos: 'Noun', eng: 'To explode / burst / pop / eruption' },
                 { word: 'khazg', cat: 'Noun/Number', pos: 'Noun', eng: 'Sky / heaven' },
@@ -3571,48 +3570,48 @@
                 { word: 'strwg', cat: 'Noun/Number', pos: 'Noun', eng: 'To compete / to contend / to struggle / non-lethal friction over a resource' },
                 { word: 'slan', cat: 'Noun/Number', pos: 'Noun', eng: 'To strike / to beat / to break' },
                 { word: 'phaz', cat: 'Noun/Number', pos: 'Noun', eng: 'To tie / to bind / knot' },
-                { word: 'klwd', cat: 'Noun/Number', pos: 'Noun', eng: 'To build / to construct / to establish / structural assembly	' },
-                { word: 'pling', cat: 'Noun/Number', pos: 'Noun', eng: 'Building / house / enclosed architectural structure	' },
-                { word: 'skad', cat: 'Noun/Number', pos: 'Noun', eng: 'To scatter / to disperse / loose	' },
-                { word: 'tham', cat: 'Noun/Number', pos: 'Noun', eng: 'To stop / to halt	' },
-                { word: 'plez', cat: 'Noun/Number', pos: 'Noun', eng: 'To put / to place / to release	' },
-                { word: 'sez', cat: 'Noun/Number', pos: 'Noun', eng: 'To hold / to grasp / to carry	' },
-                { word: 'chobh', cat: 'Noun/Number', pos: 'Noun', eng: 'To push / to propel	' },
-                { word: 'trag', cat: 'Noun/Number', pos: 'Noun', eng: 'To pull / to drag / to draw	' },
-                { word: 'sebh', cat: 'Noun/Number', pos: 'Noun', eng: 'To cut / to slice / to sever	' },
-                { word: 'chvn', cat: 'Noun/Number', pos: 'Noun', eng: 'To wear / to put on / to dress	' },
-                { word: 'klin', cat: 'Noun/Number', pos: 'Noun', eng: 'To wash / clean / purify	' },
-                { word: 'mvjh', cat: 'Noun/Number', pos: 'Noun', eng: 'To break / smash / shatter / damaged	' },
-                { word: 'cend', cat: 'Noun/Number', pos: 'Noun', eng: 'To fall / to drop / descend	' },
-                { word: 'rozd', cat: 'Noun/Number', pos: 'Noun', eng: 'To burn / to roast / to heat	' },
-                { word: 'sorb', cat: 'Noun/Number', pos: 'Noun', eng: 'To suck / inhale / absorb	' },
-                { word: 'leng', cat: 'Noun/Number', pos: 'Noun', eng: 'To attract / to pull toward / to draw / to induce	' },
-                { word: 'shlejh', cat: 'Noun/Number', pos: 'Noun', eng: 'To follow / to trail / heel	' },
-                { word: 'stand', cat: 'Noun/Number', pos: 'Noun', eng: 'To stand / upright / to establish	' },
-                { word: 'svd', cat: 'Noun/Number', pos: 'Noun', eng: 'To sit / seat	' },
-                { word: 'cab', cat: 'Noun/Number', pos: 'Noun', eng: 'To lie face up / recline	' },
-                { word: 'prozd', cat: 'Noun/Number', pos: 'Noun', eng: 'To lie face down / prostrate	' },
-                { word: 'chwmb', cat: 'Noun/Number', pos: 'Noun', eng: 'To jump / leap / bounce	' },
-                { word: 'rolbh', cat: 'Noun/Number', pos: 'Noun', eng: 'To turn / to rotate / to revolve	' },
-                { word: 'sheg', cat: 'Noun/Number', pos: 'Noun', eng: 'To shake / to wave (a body part) / to oscillate / back-and-forth motion	' },
-                { word: 'rwb', cat: 'Noun/Number', pos: 'Noun', eng: 'To wipe / to rub / friction	' },
-                { word: 'rend', cat: 'Noun/Number', pos: 'Noun', eng: 'To tear / to rip	' },
-                { word: 'krwjh', cat: 'Noun/Number', pos: 'Noun', eng: 'To press / to crush / pressure	' },
-                { word: 'kheng', cat: 'Noun/Number', pos: 'Noun', eng: 'To hang / to suspend	' },
-                { word: 'ram', cat: 'Noun/Number', pos: 'Noun', eng: 'To come in contact with / to ram	' },
-                { word: 'phlod', cat: 'Noun/Number', pos: 'Noun', eng: 'To swim / to float	' },
-                { word: 'spand', cat: 'Noun/Number', pos: 'Noun', eng: 'To expand / swell / dilate	' },
-                { word: 'shring', cat: 'Noun/Number', pos: 'Noun', eng: 'To shrink / contract	' },
-                { word: 'cabh', cat: 'Noun/Number', pos: 'Noun', eng: 'To dig / excavate	' },
-                { word: 'spid', cat: 'Noun/Number', pos: 'Noun', eng: 'To spit / vomit / emit from mouth	' },
-                { word: 'khold', cat: 'Noun/Number', pos: 'Noun', eng: 'To hug / to embrace / to hold in arms	' },
-                { word: 'kiz', cat: 'Noun/Number', pos: 'Noun', eng: 'To kiss	' },
-                { word: 'slod', cat: 'Noun/Number', pos: 'Noun', eng: 'To kill / to slaughter	' },
-                { word: 'yild', cat: 'Noun/Number', pos: 'Noun', eng: 'To bend / to flex / to yield (physical action)	' },
-                { word: 'phold', cat: 'Noun/Number', pos: 'Noun', eng: 'To break / to fold	' },
-                { word: 'sheng', cat: 'Noun/Number', pos: 'Noun', eng: 'To rise / to lift / to elevate	' },
-                { word: 'kazd', cat: 'Noun/Number', pos: 'Noun', eng: 'To throw / to cast	' },
-                { word: 'skrvbh', cat: 'Noun/Number', pos: 'Noun', eng: 'To cover / lid / canopy	' },
+                { word: 'klwd', cat: 'Noun/Number', pos: 'Noun', eng: 'To build / to construct / to establish / structural assembly' },
+                { word: 'pling', cat: 'Noun/Number', pos: 'Noun', eng: 'Building / house / enclosed architectural structure' },
+                { word: 'skad', cat: 'Noun/Number', pos: 'Noun', eng: 'To scatter / to disperse / loose' },
+                { word: 'tham', cat: 'Noun/Number', pos: 'Noun', eng: 'To stop / to halt' },
+                { word: 'plez', cat: 'Noun/Number', pos: 'Noun', eng: 'To put / to place / to release' },
+                { word: 'sez', cat: 'Noun/Number', pos: 'Noun', eng: 'To hold / to grasp / to carry' },
+                { word: 'chobh', cat: 'Noun/Number', pos: 'Noun', eng: 'To push / to propel' },
+                { word: 'trag', cat: 'Noun/Number', pos: 'Noun', eng: 'To pull / to drag / to draw' },
+                { word: 'sebh', cat: 'Noun/Number', pos: 'Noun', eng: 'To cut / to slice / to sever' },
+                { word: 'chvn', cat: 'Noun/Number', pos: 'Noun', eng: 'To wear / to put on / to dress' },
+                { word: 'klin', cat: 'Noun/Number', pos: 'Noun', eng: 'To wash / clean / purify' },
+                { word: 'mvjh', cat: 'Noun/Number', pos: 'Noun', eng: 'To break / smash / shatter / damaged' },
+                { word: 'cend', cat: 'Noun/Number', pos: 'Noun', eng: 'To fall / to drop / descend' },
+                { word: 'rozd', cat: 'Noun/Number', pos: 'Noun', eng: 'To burn / to roast / to heat' },
+                { word: 'sorb', cat: 'Noun/Number', pos: 'Noun', eng: 'To suck / inhale / absorb' },
+                { word: 'leng', cat: 'Noun/Number', pos: 'Noun', eng: 'To attract / to pull toward / to draw / to induce' },
+                { word: 'shlejh', cat: 'Noun/Number', pos: 'Noun', eng: 'To follow / to trail / heel' },
+                { word: 'stand', cat: 'Noun/Number', pos: 'Noun', eng: 'To stand / upright / to establish' },
+                { word: 'svd', cat: 'Noun/Number', pos: 'Noun', eng: 'To sit / seat' },
+                { word: 'cab', cat: 'Noun/Number', pos: 'Noun', eng: 'To lie face up / recline' },
+                { word: 'prozd', cat: 'Noun/Number', pos: 'Noun', eng: 'To lie face down / prostrate' },
+                { word: 'chwmb', cat: 'Noun/Number', pos: 'Noun', eng: 'To jump / leap / bounce' },
+                { word: 'rolbh', cat: 'Noun/Number', pos: 'Noun', eng: 'To turn / to rotate / to revolve' },
+                { word: 'sheg', cat: 'Noun/Number', pos: 'Noun', eng: 'To shake / to wave (a body part) / to oscillate / back-and-forth motion' },
+                { word: 'rwb', cat: 'Noun/Number', pos: 'Noun', eng: 'To wipe / to rub / friction' },
+                { word: 'rend', cat: 'Noun/Number', pos: 'Noun', eng: 'To tear / to rip' },
+                { word: 'krwjh', cat: 'Noun/Number', pos: 'Noun', eng: 'To press / to crush / pressure' },
+                { word: 'kheng', cat: 'Noun/Number', pos: 'Noun', eng: 'To hang / to suspend' },
+                { word: 'ram', cat: 'Noun/Number', pos: 'Noun', eng: 'To come in contact with / to ram' },
+                { word: 'phlod', cat: 'Noun/Number', pos: 'Noun', eng: 'To swim / to float' },
+                { word: 'spand', cat: 'Noun/Number', pos: 'Noun', eng: 'To expand / swell / dilate' },
+                { word: 'shring', cat: 'Noun/Number', pos: 'Noun', eng: 'To shrink / contract' },
+                { word: 'cabh', cat: 'Noun/Number', pos: 'Noun', eng: 'To dig / excavate' },
+                { word: 'spid', cat: 'Noun/Number', pos: 'Noun', eng: 'To spit / vomit / emit from mouth' },
+                { word: 'khold', cat: 'Noun/Number', pos: 'Noun', eng: 'To hug / to embrace / to hold in arms' },
+                { word: 'kiz', cat: 'Noun/Number', pos: 'Noun', eng: 'To kiss' },
+                { word: 'slod', cat: 'Noun/Number', pos: 'Noun', eng: 'To kill / to slaughter' },
+                { word: 'yild', cat: 'Noun/Number', pos: 'Noun', eng: 'To bend / to flex / to yield (physical action)' },
+                { word: 'phold', cat: 'Noun/Number', pos: 'Noun', eng: 'To break / to fold' },
+                { word: 'sheng', cat: 'Noun/Number', pos: 'Noun', eng: 'To rise / to lift / to elevate' },
+                { word: 'kazd', cat: 'Noun/Number', pos: 'Noun', eng: 'To throw / to cast' },
+                { word: 'skrvbh', cat: 'Noun/Number', pos: 'Noun', eng: 'To cover / lid / canopy' },
                 { word: 'pwbh', cat: 'Noun/Number', pos: 'Noun', eng: 'To blow / puff' },
                 { word: 'snyad', cat: 'Noun/Number', pos: 'Noun', eng: 'To take off / to shed / to detach / physical un-equipping' },
                 { word: 'phyern', cat: 'Noun/Number', pos: 'Noun', eng: 'To remove / to delete / to eliminate / to clear away' },
@@ -3635,10 +3634,10 @@
                 { word: 'steb', cat: 'Noun/Number', pos: 'Noun', eng: 'Stable / steady / structurally anchored / homeostasis' },
                 { word: 'mojh', cat: 'Noun/Number', pos: 'Noun', eng: 'Pure / unmixed / homogenous / 100% one substance' },
                 { word: 'khyvz', cat: 'Noun/Number', pos: 'Noun', eng: 'Color / hue / appearance' },
-                { word: 'red', cat: 'Noun/Number', pos: 'Noun', eng: 'Red	' },
-                { word: 'mabh', cat: 'Noun/Number', pos: 'Noun', eng: 'Blue	' },
-                { word: 'qhang', cat: 'Noun/Number', pos: 'Noun', eng: 'Yellow	' },
-                { word: 'krin', cat: 'Noun/Number', pos: 'Noun', eng: 'Green	' },
+                { word: 'red', cat: 'Noun/Number', pos: 'Noun', eng: 'Red' },
+                { word: 'mabh', cat: 'Noun/Number', pos: 'Noun', eng: 'Blue' },
+                { word: 'qhang', cat: 'Noun/Number', pos: 'Noun', eng: 'Yellow' },
+                { word: 'krin', cat: 'Noun/Number', pos: 'Noun', eng: 'Green' },
                 { word: 'tronjh', cat: 'Noun/Number', pos: 'Noun', eng: 'Orange' },
                 { word: 'phyold', cat: 'Noun/Number', pos: 'Noun', eng: 'Violet / purple' },
                 { word: 'chern', cat: 'Noun/Number', pos: 'Noun', eng: 'Black' },
@@ -3842,7 +3841,7 @@
             { suffix: 'ijh', name: 'State/Situation', desc: 'quality, state (-dom)' },
             { suffix: 'vd', name: 'Result', desc: 'result of action (-ment)' },
             { suffix: 'ard', name: 'Beginning', desc: 'beginning of action (en-, be-, -esce)' },
-            { suffix: 'iz', name: 'Commercial', desc: 'commercial, trading (-ery, -shop, -store)' },
+            { suffix: 'irm', name: 'Commercial', desc: 'commercial, trading (-ery, -shop, -store)' },
             { suffix: 'ozd', name: 'Commanding', desc: 'commanding, at the head of (arch-, head-, chief-, -master)' },
             { suffix: 'ig', name: 'Diminutive', desc: 'small, young, inferior (-ling, -let, -ette)' },
             { suffix: 'and', name: 'Liking', desc: 'liking, being fond of (-phile)' },
@@ -3855,7 +3854,7 @@
             { suffix: 'wnd', name: 'Frequentative', desc: 'frequentative effort, multiple number (-le, -er, "all around")' },
             { suffix: 'vdh', name: 'Moral', desc: 'moral characteristical generality (-ism, -ity)' },
             { suffix: 'amb', name: 'Worker', desc: 'worker; clerk; employed in (-er, -or, -ist)' },
-            { suffix: 'orz', name: 'Derivation', desc: 'deriving or being drieved from (-ate, -ide, -ine, -ian, -ese)' },
+            { suffix: 'orz', name: 'Derivation', desc: 'deriving or being derived from (-ate, -ide, -ine, -ian, -ese)' },
             { suffix: 'wng', name: 'Destination', desc: 'destination, use (-able, -ible, -ware)' },
             { suffix: 'an', name: 'Blow', desc: 'blow, strike, hit (-)' },
             { suffix: 'edh', name: 'Tree', desc: 'name of a tree (-)' },

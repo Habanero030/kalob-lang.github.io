@@ -78,6 +78,10 @@
             .border { border: 1px solid #ddd !important; }
             [id$="-tooltip"] { position: relative !important; display: block !important; border: 1px solid #ccc !important; box-shadow: none !important; margin-top: 10px !important; width: 100% !important; max-width: none !important; background: #fafaf9 !important; color: #1c1917 !important; transform: none !important; left: 0 !important; top: auto !important; }
             [id$="-tooltip"] button { display: none !important; } /* Hide close buttons on tooltips in print */
+            [id$="-tooltip"] *, [id$="-tooltip"] code, [id$="-tooltip"] strong, [id$="-tooltip"] span {
+                color: #1c1917 !important;
+                background-color: transparent !important;
+            }
             canvas { max-width: 100% !important; }
             .print-break-inside-avoid { break-inside: avoid; }
             .overflow-x-auto { overflow: visible !important; }
@@ -181,7 +185,7 @@
                             </li>
                             <li class="flex items-start">
                                 <span class="text-orange-700 mr-2">&#x25B6;</span>
-                                <div><strong>No Coda R or L:</strong> To prevent discernment issues with central vowels 'v' and 'w', 'r' and 'l' are banned from the end of syllables.</div>
+                                <div><strong>Central Vowel-Liquid Exclusion:</strong> To prevent discernment issues with central vowels 'v' and 'w', no glide of 'r' or 'l' is permitted on the coda side when 'v' or 'w' is present just prior (nor may 'r' or 'l' stand alone as a single-consonant coda in content roots).</div>
                             </li>
                             <li class="flex items-start">
                                 <span class="text-orange-700 mr-2">&#x25B6;</span>
@@ -468,7 +472,7 @@
                                 <span class="text-xs font-bold text-stone-400 uppercase tracking-wide">Singular (a)</span>
                                 <ul class="mt-1 space-y-1">
                                     <li><strong class="text-rose-700 text-base">an</strong> (a/an)</li>
-                                    <li><strong class="text-rose-700 text-base">ajh</strong> (this)</li>
+                                    <li><strong class="text-rose-700 text-base">ag</strong> (this)</li>
                                     <li><strong class="text-rose-700 text-base">ka</strong> (who?)</li>
                                     <li><strong class="text-rose-700 text-base">ca</strong> (a little)</li>
                                 </ul>
@@ -482,7 +486,7 @@
                                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                                         </button>
                                     </li>
-                                    <li><strong class="text-rose-700 text-base">ajhe</strong> (these)</li>
+                                    <li><strong class="text-rose-700 text-base">age</strong> (these)</li>
                                     <li><strong class="text-rose-700 text-base">ke</strong> (who pl.?)</li>
                                     <li><strong class="text-rose-700 text-base">ce</strong> (several)</li>
                                 </ul>
@@ -625,14 +629,14 @@
                                 <strong class="text-blue-700 block mb-1">Necessitative (Duty): <code class="bg-stone-50 px-1 border border-blue-200 rounded text-stone-800">-aj</code> &harr; <code class="bg-stone-50 px-1 border border-stone-200 rounded text-stone-800">mwzd</code> <span class="font-sans font-normal text-stone-500">(Must / Obliged)</span></strong>
                                 <ul class="list-disc pl-5 space-y-1 text-stone-600 mt-1">
                                     <li>The suffix <code class="bg-stone-100 text-rose-500 font-bold px-1 rounded">-aj</code> encodes the state of <em>needing</em> to happen.</li>
-                                    <li><em class="not-italic font-bold text-[11px] uppercase tracking-wider text-stone-400">Active SVC:</em> <span class="font-mono text-stone-800 bg-stone-100 px-1 rounded">me mwzdo lwbho</span> (I must love).</li>
+                                    <li><em class="not-italic font-bold text-[11px] uppercase tracking-wider text-stone-400">SVC:</em> <span class="font-mono text-stone-800 bg-stone-100 px-1 rounded">me mwzdo lwbhuo</span> (I must be loved).</li>
                                 </ul>
                             </li>
                             <li class="pt-3 border-t border-stone-100">
                                 <strong class="text-blue-700 block mb-1">Potential (Possibility): <code class="bg-stone-50 px-1 border border-blue-200 rounded text-stone-800">-wj</code> &harr; <code class="bg-stone-50 px-1 border border-stone-200 rounded text-stone-800">nwng</code> <span class="font-sans font-normal text-stone-500">(Can / Able)</span></strong>
                                 <ul class="list-disc pl-5 space-y-1 text-stone-600 mt-1">
                                     <li>The suffix <code class="bg-stone-100 text-rose-500 font-bold px-1 rounded">-wj</code> encodes the state of <em>being able</em> to happen.</li>
-                                    <li><em class="not-italic font-bold text-[11px] uppercase tracking-wider text-stone-400">Active SVC:</em> <span class="font-mono text-stone-800 bg-stone-100 px-1 rounded">me nwngo lwbho</span> (I can love).</li>
+                                    <li><em class="not-italic font-bold text-[11px] uppercase tracking-wider text-stone-400">SVC:</em> <span class="font-mono text-stone-800 bg-stone-100 px-1 rounded">me nwngo lwbhuo</span> (I can be loved).</li>
                                 </ul>
                             </li>
                         </ul>
@@ -658,10 +662,10 @@
                                 <strong class="text-[11px] tracking-wide uppercase text-blue-600 mb-2 block border-b border-stone-100 pb-1">1. Potential Modality (Ability)</strong>
                                 <ul class="text-sm text-stone-700 space-y-3">
                                     <li class="flex justify-between items-start gap-4">
-                                        <strong class="text-stone-500 font-medium whitespace-nowrap pt-0.5">Active (SVC):</strong>
+                                        <strong class="text-stone-500 font-medium whitespace-nowrap pt-0.5">Verbal (SVC):</strong>
                                         <div class="flex flex-col items-end text-right">
-                                            <span class="font-mono font-bold text-stone-900 bg-stone-100 border border-stone-200 px-1.5 rounded text-[13px] mb-1">me nwngo lwbho.</span>
-                                            <em class="text-stone-500 text-xs">(I am able to love.)</em>
+                                            <span class="font-mono font-bold text-stone-900 bg-stone-100 border border-stone-200 px-1.5 rounded text-[13px] mb-1">me nwngo lwbhuo.</span>
+                                            <em class="text-stone-500 text-xs">(I am able to be loved.)</em>
                                         </div>
                                     </li>
                                     <li class="flex justify-between items-start gap-4 pt-3 border-t border-stone-50">
@@ -677,17 +681,17 @@
                                 <strong class="text-[11px] tracking-wide uppercase text-blue-600 mb-2 block border-b border-stone-100 pb-1">2. Necessitative Modality (Duty)</strong>
                                 <ul class="text-sm text-stone-700 space-y-3">
                                     <li class="flex justify-between items-start gap-4">
-                                        <strong class="text-stone-500 font-medium whitespace-nowrap pt-0.5">Active (SVC):</strong>
+                                        <strong class="text-stone-500 font-medium whitespace-nowrap pt-0.5">Verbal (SVC):</strong>
                                         <div class="flex flex-col items-end text-right">
-                                            <span class="font-mono font-bold text-stone-900 bg-stone-100 border border-stone-200 px-1.5 rounded text-[13px] mb-1">me mwzdo lwbho.</span>
-                                            <em class="text-stone-500 text-xs">(I must love.)</em>
+                                            <span class="font-mono font-bold text-stone-900 bg-stone-100 border border-stone-200 px-1.5 rounded text-[13px] mb-1">me mwzdo lwbhuo.</span>
+                                            <em class="text-stone-500 text-xs">(I must be loved.)</em>
                                         </div>
                                     </li>
                                     <li class="flex justify-between items-start gap-4 pt-3 border-t border-stone-50">
                                         <strong class="text-stone-500 font-medium whitespace-nowrap pt-0.5">Passive State (Copula):</strong>
                                         <div class="flex flex-col items-end text-right">
                                             <span class="font-mono font-bold text-stone-900 bg-stone-100 border border-stone-200 px-1.5 rounded text-[13px] mb-1">me seno lwbhaj.</span>
-                                            <em class="text-stone-500 text-xs">(I am must-love / I am to-be-loved.)</em>
+                                            <em class="text-stone-500 text-xs">(I am to-be-loved.)</em>
                                         </div>
                                     </li>
                                 </ul>
@@ -732,10 +736,10 @@
                         <div>
                             <h3 class="font-mono font-bold text-teal-700 text-xl border-b-2 border-teal-100 pb-2 mb-3">stvz <span class="text-[10px] sm:text-xs border border-teal-200 bg-teal-50 px-2 py-0.5 rounded ml-1 sm:ml-2 font-sans align-middle uppercase tracking-widest text-teal-800 font-bold whitespace-nowrap">Locative</span></h3>
                             <p class="text-sm text-stone-600 mb-2"><strong class="text-stone-800">Function:</strong> Spatial presence and physical coordinate mapping.</p>
-                            <p class="text-sm text-stone-600 mb-3"><strong class="text-stone-800">Usage:</strong> <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-900 font-bold">stvz</code> maps a subject to a location or confirms physical presence in a given space. It is often combined with directional prepositions or used as a base root for inchoative serial verbs (e.g. <code class="font-mono text-stone-600 bg-stone-100 px-1 rounded text-xs border border-stone-200">stvz-u-skido</code> = to become present / to arrive).</p>
+                            <p class="text-sm text-stone-600 mb-3"><strong class="text-stone-800">Usage:</strong> <code class="font-mono bg-stone-100 border border-stone-200 px-1 rounded text-stone-900 font-bold">stvz</code> maps a subject to a location or confirms physical presence in a given space. It is often combined with directional prepositions or used as a base root for inchoative serial verbs.</p>
                             <ul class="text-sm text-stone-700 space-y-1.5 bg-stone-50 p-3 rounded border border-stone-100">
                                 <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Syntax:</strong> <span class="font-mono font-bold text-stone-900 bg-white border border-stone-200 px-1 rounded">[Subject] stvzo [Prep] [Noun]</span></li>
-                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Example:</strong><br> <span class="font-mono text-stone-800 bg-white border border-stone-200 px-1 rounded">kla stvzo in uchemb.</span> <em class="text-stone-500 text-xs">(Someon is [located] in the digital-room.)</em></li>
+                                <li><strong class="text-stone-500 text-xs uppercase tracking-wide">Example:</strong><br> <span class="font-mono text-stone-800 bg-white border border-stone-200 px-1 rounded">kla stvzo in uchemb.</span> <em class="text-stone-500 text-xs">(Someone is [located] in the digital-room.)</em></li>
                             </ul>
                         </div>
                         <div class="pt-6 border-t border-stone-100 mt-auto">
@@ -907,7 +911,7 @@
                                 <span class="text-xs font-bold text-stone-400 uppercase tracking-wide">Simple Adverbs</span>
                                 <ul class="mt-1 space-y-1">
                                     <li><strong class="text-rose-700 text-base">mazh</strong> (very)</li>
-                                    <li><strong class="text-rose-700 text-base">cezh</strong> (here)</li>
+                                    <li><strong class="text-rose-700 text-base">spizh</strong> (here)</li>
                                     <li><strong class="text-rose-700 text-base">phrozh</strong> (early)</li>
                                     <li><strong class="text-rose-700 text-base">tarzh</strong> (late)</li>
                                     <li><strong class="text-rose-700 text-base">pazh</strong> (enough)</li>
@@ -1177,8 +1181,8 @@
                         <div class="bg-stone-50 p-3 rounded border border-stone-200 text-sm">
                             <strong class="text-stone-700 block mb-2 text-xs uppercase tracking-wider">Examples:</strong>
                             <ul class="space-y-2 text-stone-600 font-mono text-xs">
-                                <li><strong>le <span class="text-blue-600">khu</span> tego pozduklodh?</strong> <span class="font-sans text-stone-500 italic ml-2">(Does he take off the cloak?)</span></li>
-                                <li><strong>le <span class="text-blue-600">khnu</span> tego pozduklodh?</strong> <span class="font-sans text-stone-500 italic ml-2">(Does he not take off the cloak?)</span></li>
+                                <li><strong>le <span class="text-blue-600">khu</span> snyado pozduklodh?</strong> <span class="font-sans text-stone-500 italic ml-2">(Does he take off the cloak?)</span></li>
+                                <li><strong>le <span class="text-blue-600">khnu</span> snyado pozduklodh?</strong> <span class="font-sans text-stone-500 italic ml-2">(Does he not take off the cloak?)</span></li>
                                 <li><strong>de <span class="text-blue-600">khu</span> manjhuqhando?</strong> <span class="font-sans text-stone-500 italic ml-2">(Are you hungry?)</span></li>
                             </ul>
                         </div>
@@ -1344,8 +1348,8 @@
                             <div class="border border-stone-100 rounded-lg p-3 bg-stone-50">
                                 <h4 class="font-bold text-stone-800 mb-2 border-b border-stone-200 pb-1">Direct Commands</h4>
                                 <ul class="space-y-2 font-mono text-xs text-stone-600 ml-2 border-l-2 border-stone-300 pl-2">
-                                    <li><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Command (Sg):</span> <strong><span class="text-rose-600">ed</span> phlod!</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(Swim!)</span></li>
-                                    <li class="pt-2"><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Command (We):</span> <strong><span class="text-rose-600">en</span> talgo!</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(Let's talk!)</span></li>
+                                    <li><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Command (Sg):</span> <strong><span class="text-rose-600">ed</span> phlodo!</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(Swim!)</span></li>
+                                    <li class="pt-2"><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Command (We):</span> <strong><span class="text-rose-600">en</span> parlo!</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(Let's talk!)</span></li>
                                 </ul>
                             </div>
 
@@ -1457,7 +1461,7 @@
                                     <li><strong class="font-mono text-emerald-700 text-base">re</strong> <span class="text-stone-500">(who, whom, which &mdash; Pl)</span></li>
                                 </ul>
                                 <ul class="space-y-2 font-mono text-xs text-stone-600 ml-2 border-l-2 border-stone-300 pl-3">
-                                    <li><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Subject:</span> <strong>pla <span class="text-emerald-600 text-sm">ra</span> skide kozh...</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(The one <strong>who</strong> succeeded first...)</span></li>
+                                    <li><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Subject:</span> <strong>pla <span class="text-emerald-600 text-sm">ra</span> skide prizh...</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(The one <strong>who</strong> succeeded first...)</span></li>
                                     <li class="pt-1"><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Object:</span> <strong>tomu <span class="text-emerald-600 text-sm">re</span> de ride...</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(The books <strong>which</strong> you read...)</span></li>
                                 </ul>
                             </div>
@@ -1497,7 +1501,7 @@
                                     <em>Note:</em> The specific directionality (where vs. to where) is determined by the action of the verb.
                                 </div>
                                 <ul class="space-y-2 font-mono text-xs text-stone-600 ml-2 border-l-2 border-stone-300 pl-3">
-                                    <li><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Example:</span> <strong>tom <span class="text-emerald-600 text-sm">rea</span> svmo...</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(The house <strong>where</strong> I live...)</span></li>
+                                    <li><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Example:</span> <strong>pling <span class="text-emerald-600 text-sm">rea</span> me svmo...</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(The house <strong>where</strong> I live...)</span></li>
                                     <li class="pt-1"><span class="font-sans italic text-[11px] text-stone-500 block uppercase tracking-wide">Example:</span> <strong>myezdu <span class="text-emerald-600 text-sm">rae</span> le kezde...</strong><br><span class="font-sans text-stone-500 italic mt-0.5 block">(The cities <strong>that</strong> she travelled to...)</span></li>
                                 </ul>
                             </div>
@@ -1689,9 +1693,9 @@
                                         <td class="p-3 italic text-amber-500/80">en-, be-, -esce</td>
                                     </tr>
                                     <tr class="hover:bg-amber-900/40">
-                                        <td class="p-3 font-bold font-mono text-amber-400 whitespace-nowrap">-iz</td>
+                                        <td class="p-3 font-bold font-mono text-amber-400 whitespace-nowrap">-irm</td>
                                         <td class="p-3">Trading, commercial</td>
-                                        <td class="p-3"><code class="font-mono bg-amber-900 border border-amber-800 px-1 rounded text-amber-200">biz</code> <span class="text-[11px] opacity-75 block mt-0.5 sm:inline sm:mt-0 sm:ml-1">(Business / occupation)</span></td>
+                                        <td class="p-3"><code class="font-mono bg-amber-900 border border-amber-800 px-1 rounded text-amber-200">phirm</code> <span class="text-[11px] opacity-75 block mt-0.5 sm:inline sm:mt-0 sm:ml-1">(Business / occupation)</span></td>
                                         <td class="p-3 italic text-amber-500/80">-ery, -shop, -store</td>
                                     </tr>
                                     <tr class="hover:bg-amber-900/40">
@@ -2106,397 +2110,336 @@
                         <div class="interlinear-block">
                             <h3 class="text-stone-400 font-bold text-xs uppercase tracking-wider mb-4 border-b border-stone-100 pb-1">Sentence 1</h3>
                             <div class="flex flex-wrap gap-x-6 gap-y-8 mb-4">
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Qhind</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">qhind-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">wind-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Nordhij</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">nordh-ij</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">north-PTCP.GNOM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">vd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">vd</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">and</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Taguphyezd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tag⟨u⟩phyezd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">day⟨CMPD⟩star-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">sku</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">sku</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">ANTI</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">ku</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">ku</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">MUT</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">spige</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">spig-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">speak-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kw</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kw</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">COMP.FACT</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pra</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pra</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pya</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pya</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.DU</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">estergi,</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">e-sterg-i</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">SUP-strong-V.GNOM</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">CMP-strong-V.GNOM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">khw</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">khw</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">when</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">an</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">an</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">INDEF</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">merjherd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">merjh-erd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">travel-ACTR-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">stvzuskide</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">stvz⟨u⟩skid-e</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">present⟨CMPD⟩become-V.PST</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kwme</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kwm-e</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">come-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pajhozh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pajh-ozh</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">wrap-ADV.TEMP</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">in</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">in</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">in</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">an</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">an</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">INDEF</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pozduklodh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pozd⟨u⟩klodh-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">back⟨CMPD⟩garment-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">okhad.</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">o-khad-ø</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">MIN-heat-N</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">tyobej.</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tyob-ej</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">warm-ADJ.GEN</div>
                                 </div>
                             </div>
                             <div class="bg-stone-50 border-l-4 border-stone-300 p-3 italic text-sm text-stone-700 rounded-r">
-                                (The North Wind and the Day-Star counter-mutually-spoke that one of the two was superiorly strong [eternally], when a traveler became present temporarily-wrapped in a warm back-garment.)
+                                (The North Wind and the Day-Star counter-mutually-spoke that one of the two was stronger [eternally], when a traveler came temporarily-wrapped in a warm back-garment.)
                             </div>
                         </div>
+
                         <!-- Sentence 2 -->
                         <div class="interlinear-block">
                             <h3 class="text-stone-400 font-bold text-xs uppercase tracking-wider mb-4 border-b border-stone-100 pb-1">Sentence 2</h3>
                             <div class="flex flex-wrap gap-x-6 gap-y-8 mb-4">
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Pre</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pre</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pye</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pye</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3PL.DU</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">ku</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">ku</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">MUT</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">trage</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">trag-e</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">tragde</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tragd-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">agree-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kw</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kw</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">COMP.FACT</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pra</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pra</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pya</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pya</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.DU</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">ra</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">ra</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">REL</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">skide</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">skid-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">succeed-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kozh</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kozh</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">prizh</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">prizh</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">first.ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">koze</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">koz-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">cause-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">thu</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">thu</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">COMP.SUBJ</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kw</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kw</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">COMP</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">merjherd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">merjh-erd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">travel-ACTR-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">tego</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">teg-o</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">take-V.PRS</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">thu</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">thu</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">SUBJ</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">odo</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">od-o</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">out-ALL</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">snyado</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">snyad-o</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">take.off-V.PRS</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">lea</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">lea</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.POSS</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pozduklodh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pozd⟨u⟩klodh-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">back⟨CMPD⟩garment-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">spegua</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">speg-⟨u⟩-a</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">think-⟨PASS⟩-V.FUT</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">estergij.</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">e-sterg-ij</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">SUP-strong-PTCP.GNOM</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">CMP-strong-PTCP.GNOM</div>
                                 </div>
                             </div>
                             <div class="bg-stone-50 border-l-4 border-stone-300 p-3 italic text-sm text-stone-700 rounded-r">
-                                (Both mutually-agreed that the one of the two who firstly succeeded [to] cause that the traveler takes out-to his back-garment ought to be thought superiorly strong [eternally].)
+                                (Both mutually-agreed that the one of the two who first succeeded [to] cause that the traveler [subjunctive] takes off his back-garment ought to be thought stronger [eternally].)
                             </div>
                         </div>
+
                         <!-- Sentence 3 -->
                         <div class="interlinear-block">
                             <h3 class="text-stone-400 font-bold text-xs uppercase tracking-wider mb-4 border-b border-stone-100 pb-1">Sentence 3</h3>
                             <div class="flex flex-wrap gap-x-6 gap-y-8 mb-4">
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Stv</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">stv</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">stv</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">then</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Qhind</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">qhind-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">wind-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Nordhij</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">nordh-ij</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">north-PTCP.GNOM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pwbhe</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pwbh-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">blow-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">ustergezh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">u-sterg-ezh</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">EQU-strong-ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kw</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kw</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">rw</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">rw</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">than</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">le</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">le</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.M</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.ANIM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">nwnge,</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">nwng-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">able-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pv</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pv</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">but</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">khw</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">khw</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">when</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">le</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">le</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.M</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.ANIM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pwbhe</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pwbh-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">blow-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">estergezh,</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">e-sterg-ezh</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">SUP-strong-ADV</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">CMP-strong-ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">slv</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">slv</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">so.then</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">consequently</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">merjherd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">merjh-erd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">travel-ACTR-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pholde</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">phold-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">fold-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">eklozezh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">e-kloz-ezh</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">SUP-close-ADV</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">CMP-close-ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">lea</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">lea</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.POSS</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pozduklodh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pozd⟨u⟩klodh-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">back⟨CMPD⟩garment-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">iz</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">iz</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">around</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">ele;</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">ele</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.ANIM.EMPH</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">vd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">vd</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">and</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Qhind</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">qhind-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">wind-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Nordhij</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">nordh-ij</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">north-PTCP.GNOM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">phajhuthame</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">phajh⟨u⟩tham-e</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">do⟨CMPD⟩stop-V.PST</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">thame</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tham-e</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">stop-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">phinezh</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">phin-ezh</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">end-ADV</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">phinzh</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">phinzh</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">finally.ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">tezd.</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tezd-ø</div>
@@ -2504,80 +2447,64 @@
                                 </div>
                             </div>
                             <div class="bg-stone-50 border-l-4 border-stone-300 p-3 italic text-sm text-stone-700 rounded-r">
-                                (Then the North Wind blew as-strongly than he was able, but when he blew superiorly-strongly, so then the traveler folded superiorly-closely his back-garment around himself; and the North Wind endingly gave up the attempt.)
+                                (Then the North Wind blew as-strongly as he was able, but when he blew more-strongly, consequently the traveler folded more-closely his back-garment around himself; and the North Wind finally stopped the attempt.)
                             </div>
                         </div>
+
                         <!-- Sentence 4 -->
                         <div class="interlinear-block">
                             <h3 class="text-stone-400 font-bold text-xs uppercase tracking-wider mb-4 border-b border-stone-100 pb-1">Sentence 4</h3>
                             <div class="flex flex-wrap gap-x-6 gap-y-8 mb-4">
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Stv</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">stv</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">stv</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">then</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Taguphyezd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tag⟨u⟩phyezd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">day⟨CMPD⟩star-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">qanguspide</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">qang⟨u⟩spid-e</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">light⟨CMPD⟩emit-V.PST</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">qangusrajhe</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">qang⟨u⟩srajh-e</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">light⟨CMPD⟩radiate-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">sternvbhezh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">stern-vbh-ezh</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">outside-ACT-ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">okhadezh,</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">o-khad-ezh</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">MIN-heat-ADV</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">tyobezh,</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tyob-ezh</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">warm-ADV</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">vd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">vd</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">and</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">merjherd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">merjh-erd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">travel-ACTR-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">tege</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">teg-e</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">take-V.PST</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">snyade</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">snyad-e</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">take.off-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">cywzh</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">cywzh</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">immediately.ADV</div>
                                 </div>
-                                <!-- Word -->
-                                <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">odo</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">od-o</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">out-ALL</div>
-                                </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">lea</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">lea</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.POSS</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pozduklodh.</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pozd⟨u⟩klodh-ø</div>
@@ -2585,82 +2512,72 @@
                                 </div>
                             </div>
                             <div class="bg-stone-50 border-l-4 border-stone-300 p-3 italic text-sm text-stone-700 rounded-r">
-                                (Then the Day-Star emitted-light exteriorly warmly, and the traveler took immediately out-to his back-garment.)
+                                (Then the Day-Star radiated-light outwardly warmly, and the traveler immediately took off his back-garment.)
                             </div>
                         </div>
+
                         <!-- Sentence 5 -->
                         <div class="interlinear-block">
                             <h3 class="text-stone-400 font-bold text-xs uppercase tracking-wider mb-4 border-b border-stone-100 pb-1">Sentence 5</h3>
                             <div class="flex flex-wrap gap-x-6 gap-y-8 mb-4">
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Vd</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">vd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">vd</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">and</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">slv</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">slv</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">so.then</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">consequently</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Qhind</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">qhind-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">wind-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Nordhij</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">nordh-ij</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">north-PTCP.GNOM</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">mwzde</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">mwzd-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">must-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kogze</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kogz-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">confess-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">kw</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">kw</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">COMP.FACT</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">Taguphyezd</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">tag⟨u⟩phyezd-ø</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">day⟨CMPD⟩star-N</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">sene</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">sen-e</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">be-V.PST</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
-                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pra</div>
-                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pra</div>
+                                    <div class="font-bold text-stone-800 text-lg mb-1 leading-none">pya</div>
+                                    <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">pya</div>
                                     <div class="text-xs text-stone-500 tracking-wide font-medium">3SG.DU</div>
                                 </div>
-                                <!-- Word -->
                                 <div class="flex flex-col items-start min-w-[30px]">
                                     <div class="font-bold text-stone-800 text-lg mb-1 leading-none">estergij.</div>
                                     <div class="font-mono text-blue-700 text-xs mb-1 bg-blue-50 px-1 py-0.5 rounded border border-blue-100 whitespace-nowrap">e-sterg-ij</div>
-                                    <div class="text-xs text-stone-500 tracking-wide font-medium">SUP-strong-PTCP.GNOM</div>
+                                    <div class="text-xs text-stone-500 tracking-wide font-medium">CMP-strong-PTCP.GNOM</div>
                                 </div>
                             </div>
                             <div class="bg-stone-50 border-l-4 border-stone-300 p-3 italic text-sm text-stone-700 rounded-r">
-                                (And so then the North Wind must confess that the Day-Star was the superiorly strong one of the two.)
+                                (And consequently the North Wind had to confess that the Day-Star was the stronger one of the two.)
                             </div>
                         </div>
                     </div>
@@ -2762,7 +2679,7 @@
                             <option value="phwn">phwn (1)</option>
                             <option value="tvbh">tvbh (2)</option>
                             <option value="threz">threz (3)</option>
-                            <option value="kajh">kajh (4)</option>
+                            <option value="qad">qad (4)</option>
                             <option value="cen">cen (10)</option>
                         </select>
                     </div>
@@ -2917,8 +2834,8 @@
                 { word: "age", eng: "these, these ones", cat: 'Designative', pos: 'Demonstrative'},
                 { word: "ajh", eng: "that, that one", cat: 'Designative', pos: 'Demonstrative'},
                 { word: "ajhe", eng: "those, those ones", cat: 'Designative', pos: 'Demonstrative'},
-                { word: "abh", eng: "that one there, that one over there", cat: 'Designative', pos: 'Demonstrative'},
-                { word: "abhe", eng: "those ones there, those ones over there", cat: 'Designative', pos: 'Demonstrative'},
+                { word: "adh", eng: "that one there, that one over there", cat: 'Designative', pos: 'Demonstrative'},
+                { word: "adhe", eng: "those ones there, those ones over there", cat: 'Designative', pos: 'Demonstrative'},
                 { word: "al", eng: "of a/an, from a/an, by a/an", cat: 'Designative', pos: 'Demonstrative'},
                 { word: "ale", eng: "of them, from them, by them", cat: 'Designative', pos: 'Demonstrative'},
                 { word: "ad", eng: "to a/an", cat: 'Designative', pos: 'Demonstrative'},
@@ -2936,7 +2853,11 @@
                 { word: "ke", eng: "who? what? which? (Plural)", cat: 'Designative', pos: 'Interrogative'},
                 { word: "re", eng: "who, which, that (Plural)", cat: 'Designative', pos: 'Relative'},
                 { word: "eke", eng: "of which? (Plural)", cat: 'Designative', pos: 'Interrogative'},
-                { word: "aka", eng: "to which? (Plural)", cat: 'Designative', pos: 'Interrogative'},
+                { word: "ake", eng: "to which? (Plural)", cat: 'Designative', pos: 'Interrogative'},
+                { word: "kea", eng: "where? whither? whence? (Singular)", cat: 'Designative', pos: 'Interrogative'},
+                { word: "kae", eng: "where? whither? whence? (Plural)", cat: 'Designative', pos: 'Interrogative'},
+                { word: "rea", eng: "where, to where, from where (Singular)", cat: 'Designative', pos: 'Relative'},
+                { word: "rae", eng: "where, to where, from where (Plural)", cat: 'Designative', pos: 'Relative'},
                 { word: "ere", eng: "of whom (Plural)", cat: 'Designative', pos: 'Relative'},
                 { word: "are", eng: "to whom (Plural)", cat: 'Designative', pos: 'Relative'},
                 
@@ -3067,7 +2988,7 @@
                 { word: 'kw', cat: 'Connective', pos: 'Conjunction', eng: 'That' },
                 { word: 'wb', cat: 'Connective', pos: 'Conjunction', eng: 'Because (Explanatory Justification)' },
                 { word: 'plw', cat: 'Connective', pos: 'Conjunction', eng: 'In order to, for (purpose) [same subject]' },
-                { word: 'snw', cat: 'Connective', pos: 'Conjunction', eng: 'Since (causal, explantory)' },
+                { word: 'snw', cat: 'Connective', pos: 'Conjunction', eng: 'Since (causal, explanatory)' },
                 { word: 'cw', cat: 'Connective', pos: 'Conjunction', eng: 'Provided that' },
                 { word: 'sri', cat: 'Connective', pos: 'Conjunction', eng: 'At the rate of' },
                 { word: 'pri', cat: 'Connective', pos: 'Conjunction', eng: 'At the price of' },
@@ -3776,7 +3697,7 @@
                 { word: 'srajh', cat: 'Noun/Number', pos: 'Noun', eng: 'To radiate / to shoot / high-velocity emission / radial' },
                 { word: 'lenz', cat: 'Noun/Number', pos: 'Noun', eng: 'Lens / mirror / optical manipulation device' },
                 { word: 'kern', cat: 'Noun/Number', pos: 'Noun', eng: 'Nucleus / dense core / atomic / nuclear' },
-                { word: 'spigh', cat: 'Noun/Number', pos: 'Noun', eng: 'o inspire / inspiration / to enlighten / to spark a dormant state / to instill' },
+                { word: 'spigh', cat: 'Noun/Number', pos: 'Noun', eng: 'To inspire / inspiration / to enlighten / to spark a dormant state / to instill' },
                 { word: 'prod', cat: 'Noun/Number', pos: 'Noun', eng: 'To produce / to yield / industrial or agricultural output' },
                 { word: 'steln', cat: 'Noun/Number', pos: 'Noun', eng: 'To send / to deliver / to dispatch a payload' },
                 { word: 'phlob', cat: 'Noun/Number', pos: 'Noun', eng: 'To develop / to grow / systemic or biological progression' },
@@ -3905,7 +3826,7 @@
             { id: 'idh', name: 'Ordinal', suffix: 'idh', desc: '1st, 2nd, 3rd...' },
             { id: 'old', name: 'Multiplicative', suffix: 'old', desc: 'Single, double...' },
             { id: 'oz', name: 'Multiplier', suffix: 'oz', desc: 'Singly, doubly...' },
-            { id: 'ezh', name: 'Distributive', suffix: 'ezh', desc: 'One by one...' },
+            { id: 'om', name: 'Distributive', suffix: 'ezh', desc: 'One by one...' },
             { id: 'am', name: 'Collective', suffix: 'am', desc: 'Unity, pair...' },
             { id: 'erl', name: 'Sortive', suffix: 'erl', desc: 'Of one kind...' }
         ];
@@ -3927,7 +3848,8 @@
             { suffix: 'and', name: 'Liking', desc: 'liking, being fond of (-phile)' },
             { suffix: 'vbh', name: 'Action/Operation', desc: 'acting, operating (-ify, -ize, -en, -ant, -ent)' },
             { suffix: 'wd', name: 'Science', desc: 'name of science (-logy, -ics, -graphy)' },
-            { suffix: 'ib', name: 'Instrument', desc: 'instrument (-er, -or, -ment, -ary, -cle)' },
+            { suffix: 'vb', name: 'Instrument', desc: 'instrument (-er, -or, -ment, -ary, -cle)' },
+            { suffix: 'in', name: 'Containing', desc: 'containing, full of (-ful, -ous)' },
             { suffix: 'anz', name: 'Change of State', desc: 'changing state or action (-ize, -ify, -en, -esce)' },
             { suffix: 'en', name: 'Multiple', desc: 'multiple effort, multiple number (-ening)' },
             { suffix: 'wnd', name: 'Frequentative', desc: 'frequentative effort, multiple number (-le, -er, "all around")' },

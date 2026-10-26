@@ -622,6 +622,350 @@
                 </div>
             </div>
 
+            <!-- Connective Disambiguation & Relational Precision -->
+            <div class="bg-teal-950 text-white p-6 rounded-xl shadow-md border border-teal-800 mt-8 mb-8">
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-teal-300 mb-2">Relational Precision: Disambiguating Connectives</h2>
+                    <p class="text-sm text-teal-100 leading-relaxed">
+                        Natural languages heavily overload prepositions like <em>"for," "by,"</em> and <em>"of,"</em> forcing listeners to guess the underlying relationship from context. Kalob eliminates prepositional ambiguity through a <strong>16-root directional vector system</strong> and dedicated connectives for every logical, spatial, temporal, and causal role.
+                    </p>
+                </div>
+
+                <!-- 1. The 16 Prepositions of Situation (VC -> VCi / VCo) -->
+                <div class="bg-teal-900/50 rounded-xl border border-teal-800 p-5 mb-6">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3 border-b border-teal-800 pb-2">
+                        <h3 class="font-bold text-teal-200 text-base">The 16 Declinable Prepositions of Situation (<code class="font-mono text-white">VC &rarr; VCi / VCo</code>)</h3>
+                        <span class="text-[10px] font-mono uppercase tracking-wider bg-teal-950 text-teal-300 px-2.5 py-1 rounded border border-teal-700">13 Spatial &bull; 3 Temporal</span>
+                    </div>
+                    <p class="text-xs text-teal-100 mb-4 leading-relaxed">
+                        Exactly 16 prepositions share the structural shape <strong class="font-mono text-white">VC</strong> (a single vowel <code class="font-mono">i</code> or <code class="font-mono">o</code> followed by a soft consonant). By appending a directional vowel to the consonant coda, a static location or time is instantly converted into a dynamic vector:
+                        <strong class="text-amber-300 font-mono ml-1">-i</strong> = <strong>Origin</strong> (<em>from</em>) &bull;
+                        <strong class="text-sky-300 font-mono ml-1">-o</strong> = <strong>Direction / Passage</strong> (<em>to, toward, via, passing through</em>).
+                    </p>
+
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-xs">
+                        <!-- Part A: Spatial (1-8) -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse bg-teal-950/70 rounded border border-teal-800 font-mono">
+                                <thead class="bg-teal-900/80 text-teal-300 uppercase text-[10px] font-sans border-b border-teal-800">
+                                    <tr>
+                                        <th class="p-2">Static (<code class="text-white">VC</code>)</th>
+                                        <th class="p-2">Origin (<code class="text-amber-300">+i</code>)</th>
+                                        <th class="p-2">Vector / Via (<code class="text-sky-300">+o</code>)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-teal-800/50">
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ib</strong> <span class="font-sans text-teal-200 text-[11px]">on / above</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ibi</strong> <span class="font-sans text-teal-200 text-[11px]">from above</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ibo</strong> <span class="font-sans text-teal-200 text-[11px]">over / passing above</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ojh</strong> <span class="font-sans text-teal-200 text-[11px]">under / below</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ojhi</strong> <span class="font-sans text-teal-200 text-[11px]">from under</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ojho</strong> <span class="font-sans text-teal-200 text-[11px]">underneath / passing below</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ozh</strong> <span class="font-sans text-teal-200 text-[11px]">beyond</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ozhi</strong> <span class="font-sans text-teal-200 text-[11px]">from beyond</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ozho</strong> <span class="font-sans text-teal-200 text-[11px]">passing beyond</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">igh</strong> <span class="font-sans text-teal-200 text-[11px]">this side</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ighi</strong> <span class="font-sans text-teal-200 text-[11px]">from this side</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">igho</strong> <span class="font-sans text-teal-200 text-[11px]">passing this side</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">og</strong> <span class="font-sans text-teal-200 text-[11px]">behind</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ogi</strong> <span class="font-sans text-teal-200 text-[11px]">from behind</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ogo</strong> <span class="font-sans text-teal-200 text-[11px]">by behind</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ij</strong> <span class="font-sans text-teal-200 text-[11px]">before / in front</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">iji</strong> <span class="font-sans text-teal-200 text-[11px]">from in front</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ijo</strong> <span class="font-sans text-teal-200 text-[11px]">passing in front</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">od</strong> <span class="font-sans text-teal-200 text-[11px]">outside</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">odi</strong> <span class="font-sans text-teal-200 text-[11px]">from outside</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">odo</strong> <span class="font-sans text-teal-200 text-[11px]">out to / passing outside</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">in</strong> <span class="font-sans text-teal-200 text-[11px]">inside / in</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ini</strong> <span class="font-sans text-teal-200 text-[11px]">from inside / out of</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ino</strong> <span class="font-sans text-teal-200 text-[11px]">into / through inside</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Part B: Spatial (9-13) & Temporal (14-16) -->
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse bg-teal-950/70 rounded border border-teal-800 font-mono">
+                                <thead class="bg-teal-900/80 text-teal-300 uppercase text-[10px] font-sans border-b border-teal-800">
+                                    <tr>
+                                        <th class="p-2">Static (<code class="text-white">VC</code>)</th>
+                                        <th class="p-2">Origin (<code class="text-amber-300">+i</code>)</th>
+                                        <th class="p-2">Vector / Via (<code class="text-sky-300">+o</code>)</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-teal-800/50">
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ob</strong> <span class="font-sans text-teal-200 text-[11px]">up / high</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">obi</strong> <span class="font-sans text-teal-200 text-[11px]">from on high</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">obo</strong> <span class="font-sans text-teal-200 text-[11px]">via the top</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ibh</strong> <span class="font-sans text-teal-200 text-[11px]">down / low</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ibhi</strong> <span class="font-sans text-teal-200 text-[11px]">from below</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ibho</strong> <span class="font-sans text-teal-200 text-[11px]">via the bottom</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">ijh</strong> <span class="font-sans text-teal-200 text-[11px]">against</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ijhi</strong> <span class="font-sans text-teal-200 text-[11px]">from against</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ijho</strong> <span class="font-sans text-teal-200 text-[11px]">by opposition / apart</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">iz</strong> <span class="font-sans text-teal-200 text-[11px]">around</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">izi</strong> <span class="font-sans text-teal-200 text-[11px]">from around</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">izo</strong> <span class="font-sans text-teal-200 text-[11px]">surrounding / by around</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">oj</strong> <span class="font-sans text-teal-200 text-[11px]">near / by</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">oji</strong> <span class="font-sans text-teal-200 text-[11px]">from near</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ojo</strong> <span class="font-sans text-teal-200 text-[11px]">alongside / by near</span></td>
+                                    </tr>
+                                    <tr class="bg-teal-900/40">
+                                        <td colspan="3" class="px-2 py-0.5 font-sans text-[10px] font-bold uppercase tracking-wider text-teal-300">Temporal Prepositions (14&ndash;16)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">im</strong> <span class="font-sans text-teal-200 text-[11px]">in/on (date)</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">imi</strong> <span class="font-sans text-teal-200 text-[11px]">from (past date)</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">imo</strong> <span class="font-sans text-teal-200 text-[11px]">by (future deadline)</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">on</strong> <span class="font-sans text-teal-200 text-[11px]">since / from</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">oni</strong> <span class="font-sans text-teal-200 text-[11px]">from that instant</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ono</strong> <span class="font-sans text-teal-200 text-[11px]">starting from</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="p-2"><strong class="text-white">oz</strong> <span class="font-sans text-teal-200 text-[11px]">after</span></td>
+                                        <td class="p-2"><strong class="text-amber-300">ozi</strong> <span class="font-sans text-teal-200 text-[11px]">from after / later</span></td>
+                                        <td class="p-2"><strong class="text-sky-300">ozo</strong> <span class="font-sans text-teal-200 text-[11px]">much later / by after</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 & 3: Disambiguating "For" and "By" -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    
+                    <!-- 2. The 7 Ways to Say "For" -->
+                    <div class="bg-teal-900/50 rounded-xl border border-teal-800 p-5 flex flex-col">
+                        <div class="flex items-center justify-between border-b border-teal-800 pb-2 mb-3">
+                            <h3 class="font-bold text-teal-200 text-base">Disambiguating "For" (7 Roles)</h3>
+                            <span class="text-[10px] font-mono bg-teal-950 text-teal-300 px-2 py-0.5 rounded border border-teal-700">pro / plw / po / tri / sho / ci / spi</span>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-teal-100 flex-grow">
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">pro</strong> <strong class="text-white">&rArr; Exchange or Reason:</strong> Transactional exchange, price, or general reason.<br>
+                                <span class="font-mono text-teal-200">me kibho phlvz <strong class="text-amber-300">pro</strong> tom.</span> <em class="text-teal-400">(I give money for the book.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">plw</strong> <strong class="text-white">&rArr; Purpose / Intent (Same Subject):</strong> "In order to" (Fr. <em>afin de</em>); precedes a verb.<br>
+                                <span class="font-mono text-teal-200">me merjho <strong class="text-amber-300">plw</strong> stwdo.</span> <em class="text-teal-400">(I travel for study / in order to study.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">po</strong> <strong class="text-white">&rArr; Enablement / Facilitation (New Subject):</strong> "So that / for X to..." (Fr. <em>pour que</em>); also used for proportion.<br>
+                                <span class="font-mono text-teal-200">me stardo pord <strong class="text-amber-300">po</strong> le phlezo.</span> <em class="text-teal-400">(I open the door for him to enter.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">tri</strong> <strong class="text-white">&rArr; Benefaction or Devotion:</strong> "For the sake/love of."<br>
+                                <span class="font-mono text-teal-200">me lebo <strong class="text-amber-300">tri</strong> pham.</span> <em class="text-teal-400">(I work for [the sake of] the family.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">sho</strong> <strong class="text-white">&rArr; Reference or Topic:</strong> "As for / concerning / regarding" (Fr. <em>quant à</em>).<br>
+                                <span class="font-mono text-teal-200"><strong class="text-amber-300">sho</strong> tom, ze kargo.</span> <em class="text-teal-400">(As for the book, it is good.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">ci</strong> <strong class="text-white">&rArr; Duration:</strong> "For [a timeframe] / during" (Fr. <em>pendant</em>).<br>
+                                <span class="font-mono text-teal-200">me slwmbe <strong class="text-amber-300">ci</strong> led.</span> <em class="text-teal-400">(I slept for [during] the night.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2.5 rounded border border-teal-800/80">
+                                <strong class="font-mono text-amber-300 text-sm">spi</strong> <strong class="text-white">&rArr; Precise Destination (vs. Vague <code class="font-mono text-sky-300">to</code>):</strong> Heading to an exact destination.<br>
+                                <span class="font-mono text-teal-200">me libho <strong class="text-amber-300">spi</strong> myezd.</span> <em class="text-teal-400">(I leave for the city &bull; Vague direction: <code class="font-mono not-italic text-sky-300">to myezd</code>)</em>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. The 9 Ways to Say "By" -->
+                    <div class="bg-teal-900/50 rounded-xl border border-teal-800 p-5 flex flex-col">
+                        <div class="flex items-center justify-between border-b border-teal-800 pb-2 mb-3">
+                            <h3 class="font-bold text-teal-200 text-base">Disambiguating "By" (9 Constructions)</h3>
+                            <span class="text-[10px] font-mono bg-teal-950 text-teal-300 px-2 py-0.5 rounded border border-teal-700">Case / Prep / Adv</span>
+                        </div>
+                        <ul class="space-y-2 text-xs text-teal-100 flex-grow">
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-rose-300">al / ale / e-C-a</strong> <strong class="text-white">&rArr; Passive Agent (Case):</strong> Uses Genitive-Ablative case (<code class="font-mono text-rose-300">ema</code> "by me", <code class="font-mono text-rose-300">al</code> "by a/the", <code class="font-mono text-rose-300">ale</code> "by them").<br>
+                                <span class="font-mono text-teal-200">tom skribhue <strong class="text-rose-300">al</strong> ren.</span> <em class="text-teal-400">(The book was written by a person.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-sky-300">pi</strong> <strong class="text-white">&rArr; Method or Distribution:</strong><br>
+                                <span class="font-mono text-teal-200">ne phleze phwn <strong class="text-sky-300">pi</strong> phwn.</span> <em class="text-teal-400">(We entered one by one.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-sky-300">pho</strong> <strong class="text-white">&rArr; Instrument ("By means of"):</strong><br>
+                                <span class="font-mono text-teal-200">me starde za <strong class="text-sky-300">pho</strong> an shvb.</span> <em class="text-teal-400">(I opened it by means of a tool.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-sky-300">sri</strong> <strong class="text-white">&rArr; Commercial Rate / Proportion ("Percent" = <code class="font-mono text-amber-300">pro khwnd</code>):</strong><br>
+                                <span class="font-mono text-teal-200">phyad shenge <strong class="text-sky-300">sri</strong> cen <strong class="text-amber-300">pro khwnd</strong>.</span> <em class="text-teal-400">(The price rose by 10 percent [10 for 100].)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-sky-300">phyo</strong> <strong class="text-white">&rArr; Route or Passage ("Via / By way of"):</strong><br>
+                                <span class="font-mono text-teal-200">ne libhe <strong class="text-sky-300">phyo</strong> (au) London.</span> <em class="text-teal-400">(We left by way of London.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-sky-300">oj</strong> <strong class="text-white">&rArr; Proximity ("Near / Beside"):</strong><br>
+                                <span class="font-mono text-teal-200">me svmo in an pling <strong class="text-sky-300">oj</strong> phan.</span> <em class="text-teal-400">(I live in a house by the river.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-sky-300">imo</strong> <strong class="text-white">&rArr; Future Deadline (<code class="font-mono">im</code> + <code class="font-mono">-o</code>):</strong><br>
+                                <span class="font-mono text-teal-200">me phina <strong class="text-sky-300">imo</strong> au Monday.</span> <em class="text-teal-400">(I will finish by Monday.)</em>
+                            </li>
+                            <li class="bg-teal-950/70 p-2 rounded border border-teal-800/80">
+                                <strong class="font-mono text-emerald-300">lwzh</strong> <strong class="text-white">&rArr; Adverbial Idiom ("By chance") &bull;</strong> <strong class="font-mono text-indigo-300">au</strong> <strong class="text-white">&rArr; "By the name of":</strong><br>
+                                <span class="font-mono text-teal-200">me chyane za <strong class="text-emerald-300">lwzh</strong>.</span> <em class="text-teal-400">(I spotted it by chance.)</em> &bull; <span class="font-mono text-teal-200">cho an phem <strong class="text-indigo-300">au</strong> Jill.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- 4. The 10-Way Genitive ("Of") Matrix -->
+                <div class="bg-teal-900/50 rounded-xl border border-teal-800 p-5">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-3 border-b border-teal-800 pb-2">
+                        <h3 class="font-bold text-teal-200 text-base">The 10-Way Genitive Matrix: Disambiguating "Of"</h3>
+                        <span class="text-[10px] font-mono uppercase tracking-wider bg-teal-950 text-teal-300 px-2.5 py-1 rounded border border-teal-700">Semantic Precision</span>
+                    </div>
+                    <p class="text-xs text-teal-100 mb-4 leading-relaxed">
+                        Rather than linking every pair of nouns with a single vague "of," Kalob selects the exact connective or morphological structure that reflects the real-world relationship between the two nouns:
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 text-xs">
+                        <!-- 1. Possession -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-amber-300 mb-1">1. Possession (<code class="font-mono text-white">obh</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">True ownership, property, or territorial belonging.</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                pholgu <strong class="text-amber-300">obh</strong> Europa<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(The countries of Europe)</span>
+                            </div>
+                        </div>
+
+                        <!-- 2. Composition -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-amber-300 mb-1">2. Composition (<code class="font-mono text-white">ti</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">The physical material something is made of.</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                pling <strong class="text-amber-300">ti</strong> ston / ring <strong class="text-amber-300">ti</strong> chin<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(House of stone / Ring of gold)</span>
+                            </div>
+                        </div>
+
+                        <!-- 3. Content -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-amber-300 mb-1">3. Content (<code class="font-mono text-white">ti</code> vs. <code class="font-mono text-white">-inej</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Use <code class="font-mono">ti</code> for a container of X, or <code class="font-mono">-inej</code> to stress "full of X."</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                an taz <strong class="text-amber-300">ti</strong> phan / taz phan<strong class="text-amber-300">inej</strong><br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(A cup of water / Cup full of water)</span>
+                            </div>
+                        </div>
+
+                        <!-- 4. Origin / Extraction -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-sky-300 mb-1">4. Origin / Extraction (<code class="font-mono text-white">om / pi</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Coming from a place (<code class="font-mono">om</code>) or produced by (<code class="font-mono">pi</code>).</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                ribh <strong class="text-sky-300">om</strong> kend<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(The arrival from [of] town)</span>
+                            </div>
+                        </div>
+
+                        <!-- 5. Kinship / Generation -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-rose-300 mb-1">5. Kinship / Lineage (<code class="font-mono text-white">al / ale</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Family lineage or birth (<code class="font-mono">al</code> Sg. / <code class="font-mono">ale</code> Pl. possessor).</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                tu kind <strong class="text-rose-300">al</strong> rwghambozd<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(The daughter of the king)</span>
+                            </div>
+                        </div>
+
+                        <!-- 6. Epexegetical ("Namely") -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-emerald-300 mb-1">6. Epexegetical (<code class="font-mono text-white">klv</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Renames or specifies the head noun ("namely / that is").</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                an kibh <strong class="text-emerald-300">klv</strong> manjh<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(A gift of [namely] food)</span>
+                            </div>
+                        </div>
+
+                        <!-- 7. Qualification (-ej) -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-emerald-300 mb-1">7. Qualification (<code class="font-mono text-white">-ej</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Innate quality; converts the second noun into an adjective.</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                an parjh rwghambozd<strong class="text-emerald-300">ej</strong><br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(A morsel of royalty / royal morsel)</span>
+                            </div>
+                        </div>
+
+                        <!-- 8. Special / Regional Origin -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-indigo-300 mb-1">8. Regional / Brand Origin</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Direct proper-noun apposition (optional <code class="font-mono">au</code> in speech).</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                pherm (<strong class="text-indigo-300">au</strong>) Shanpanyw<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(Wine of Champagne)</span>
+                            </div>
+                        </div>
+
+                        <!-- 9. Partitive (Suppressed) -->
+                        <div class="bg-teal-950/70 p-3 rounded-lg border border-teal-800">
+                            <div class="font-bold text-stone-300 mb-1">9. Partitive (<code class="font-mono text-white">[Suppressed]</code>)</div>
+                            <p class="text-teal-200 text-[11px] mb-2">Unspecified "some of" an uncountable noun is omitted.</p>
+                            <div class="font-mono text-white bg-teal-900/60 p-1.5 rounded border border-teal-800">
+                                ed kibho qhid.<br>
+                                <span class="font-sans italic text-teal-300 text-[10px]">(Give [some of the] bread.)</span>
+                            </div>
+                        </div>
+
+                        <!-- 10. Subjective vs Objective Genitive (Full Width) -->
+                        <div class="md:col-span-2 lg:col-span-3 bg-teal-950/90 p-3.5 rounded-lg border border-teal-700 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                            <div>
+                                <div class="font-bold text-amber-300 text-sm mb-0.5">10. Resolving the Subjective vs. Objective Genitive</div>
+                                <p class="text-teal-100 text-xs">English action-nouns like <em>"the love of God"</em> are ambiguous. Kalob resolves the vector explicitly:</p>
+                            </div>
+                            <div class="flex flex-col sm:flex-row gap-3 font-mono text-xs shrink-0">
+                                <div class="bg-teal-900 px-3 py-2 rounded border border-teal-700">
+                                    <span class="font-sans text-[10px] text-rose-300 uppercase font-bold block">Subjective (Agent = al):</span>
+                                    <strong>lwbh <span class="text-rose-300">al</span> tibh</strong> <span class="font-sans italic text-teal-200 text-[11px]">(God's love [by God])</span>
+                                </div>
+                                <div class="bg-teal-900 px-3 py-2 rounded border border-teal-700">
+                                    <span class="font-sans text-[10px] text-sky-300 uppercase font-bold block">Objective (Target = lo / ijh / ad):</span>
+                                    <strong>lwbh <span class="text-sky-300">lo</span> tibh</strong> <span class="font-sans italic text-teal-200 text-[11px]">(Love towards God)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Personal Pronouns Deep Dive -->
             <div class="bg-rose-900 text-white p-6 rounded-xl shadow-md border border-rose-800 mt-8 mb-8 relative">
                 <h2 class="text-2xl font-bold mb-4 text-rose-300">Personal Pronouns: The Consonant Core</h2>
